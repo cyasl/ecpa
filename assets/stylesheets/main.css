@@ -31,9 +31,47 @@ footer, header, hgroup, menu, nav, section {
 body {
   line-height: 1;
 }
-ol, ul {
+
+ul {
   list-style: none;
 }
+
+ol.circle {
+  list-style: none;
+  counter-reset: item;
+}
+
+ol.circle > li{
+  counter-increment: item;
+  margin-bottom: 5px;
+}
+
+ol.circle > li:before {
+  margin-right: 10px;
+  content: counter(item);
+  background: #19327a;
+  border-radius: 100%;
+  color: white;
+  width: 1.3em;
+  text-align: center;
+  display: inline-block;
+}
+
+ul.circle > li{
+  margin-bottom: 5px;
+}
+
+ul.circle > li:before {
+  margin-right: 10px;
+  content: "✓";
+  background: #19327a;
+  border-radius: 100%;
+  color: white;
+  width: 1.3em;
+  text-align: center;
+  display: inline-block;
+}
+
 blockquote, q {
   quotes: none;
 }
@@ -222,11 +260,15 @@ p a {
 
 /*
   ========================================
-  Flags
+  Flags and Figures
   ========================================
 */
 .flag{
   width: 4%;
+}
+
+.figure{
+  width: 90%;
 }
 
 /*
@@ -301,7 +343,7 @@ p a {
 
 /*
   ========================================
-  members
+  Contributors
   ========================================
 */
 
@@ -312,6 +354,19 @@ p a {
   border: 1px solid #dfe2e5;
   border-radius: 5px;
   margin-top: 88px;
+  padding: 22px 0;
+  text-align: center;
+}
+
+/*
+  ========================================
+  Project
+  ========================================
+*/
+.figure-tag{
+  border: 1px solid #dfe2e5;
+  border-radius: 5px;
+  margin-top: 20px;
   padding: 22px 0;
   text-align: center;
 }
