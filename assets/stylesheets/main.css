@@ -353,6 +353,7 @@ p a {
 .contributor-info {
   border: 1px solid #dfe2e5;
   border-radius: 5px;
+  margine-right: 20px;
   margin-top: 88px;
   padding: 22px 0;
   text-align: left;
